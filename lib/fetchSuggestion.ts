@@ -1,4 +1,4 @@
-const fetchSuggestion = () => fetch("/api/suggesion", {
+const fetchSuggestion = () => fetch("/api/suggestion", {
         cache: "no-store"
     }).then(res => res.json());
 
