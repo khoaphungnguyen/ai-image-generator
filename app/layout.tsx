@@ -1,6 +1,7 @@
 import PromtInput from '@/components/PromtInput'
 import './globals.css'
 import Header from '@/components/Header'
+import ClientProvider from '@/components/ClientProvider'
 
 export default function RootLayout({
   children,
@@ -10,12 +11,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-      {/* Header */}
-      <Header />
-       {/* Prompt Input */}
-       <PromtInput />
-      {children}
-
+      <ClientProvider>
+        <Header />
+        <PromtInput />
+        {children}
+      </ClientProvider>
       </body>
     </html>
   )

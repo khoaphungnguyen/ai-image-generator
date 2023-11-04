@@ -1,5 +1,4 @@
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
-// const  openai = require("../../../openai")
 import openai from "../../lib/openai"
 
 export async function getSuggestion(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
@@ -16,7 +15,7 @@ export async function getSuggestion(request: HttpRequest, context: InvocationCon
 };
 
 app.http('getSuggestion', {
-    methods: ['GET', 'POST'],
+    methods: ['GET'],
     authLevel: 'anonymous',
     handler: getSuggestion
 });
