@@ -5,12 +5,12 @@ export async function GET(request:Request){
     }
 
     // Connect to our Azure Function
-    const res = await fetch(getSuggestionUrl, {
-        cache: 'no-store'
-    });
+    const res = await fetch(getSuggestionUrl);
 
     const textData = await res.text()
     return new Response(JSON.stringify(textData.trim()), {
         status:200,
     })
 }
+
+export const dynamic = 'force-dynamic'

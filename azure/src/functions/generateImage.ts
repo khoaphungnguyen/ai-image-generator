@@ -57,7 +57,6 @@ export async function generateImage(request: HttpRequest): Promise<HttpResponseI
     
 };
 
-
 app.http('generateImage',{
     methods: ['POST'],
     authLevel: 'anonymous',

@@ -4,9 +4,7 @@ if (!getImageUrl) {
     throw new Error('The environment variable GET_IMAGES_URL is not set.');
 }
 
-const res = await fetch(getImageUrl, {
-    cache: 'no-store'
-});
+const res = await fetch(getImageUrl);
     
     const blob =  await res.blob();
     const textData = await blob.text();
@@ -17,3 +15,5 @@ const res = await fetch(getImageUrl, {
     })
 
 }
+
+export const dynamic = 'force-dynamic'

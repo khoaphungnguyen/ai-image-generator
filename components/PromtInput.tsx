@@ -30,6 +30,8 @@ function PromtInput() {
             `DALL-E is creating: ${notificationPromptShort}`
         )
 
+        console.log(p)
+
         const res = await fetch('/api/generateImage', {
             method: "POST",
             headers :{

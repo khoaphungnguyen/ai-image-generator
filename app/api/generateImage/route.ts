@@ -12,7 +12,7 @@ export async function POST(request:Request){
         headers: {
             'Content-Type':'application/json'
         },
-        body: JSON.stringify({prompt})
+        body: JSON.stringify({prompt}),
     })
     const textData = await response.text()
     return new Response(JSON.stringify(textData), {
